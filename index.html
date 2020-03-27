@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Teste seus conhecimentos</title>
+</head>
+<body>
+    <header>
+        <h1>Teste seus conhecimentos</h1>
+    </header>
+    
+<!-- Solicitação de nome e saudação  -->
+    <form onsubmit="return false" id="intro">
+        <label for="name">Como você se chama?</label>
+        <input onkeypress="funcaoNome(event)" type="text" placeholder="Insira seu nome" name="name" id="name">
+        <button onclick="buttonName()">Enviar</button>
+    </form>
+
+    <h3 id="identification"></h3>
+
+<!-- Opção de seleção do quiz -->
+    <form onsubmit="return false" id="quiz" style="display: none;">
+        <button onclick="quizGeo()">Geografia</button>
+        <button onclick="quizMat()">Matemática</button>
+    </form>
+
+ <!-- Quiz GEOGRAFIA    -->
+    <section id="geo">
+        <form onsubmit="return false" id="questionOne" style="display: none;">
+            <p>Qual a capital de Pernambuco ?</p>
+            <button onclick="answerOneOne()">Alagoas</button>
+            <button onclick="answerOneTwo()">Recife</button>
+            <button onclick="answerOneThree()">Natal</button>
+        </form>
+        <p id="answerQuestionOne"></p>
+        
+        <form onsubmit="return false" id="questionTwo" style="display: none;">
+            <p>Qual a capital do Amazonas ?</p>
+            <button onclick="answerTwoOne()">Manaus</button>
+            <button onclick="answerTwoTwo()">Rio Branco</button>
+            <button onclick="answerTwoThree()">Porto Velho</button>
+        </form>
+        <p id="answerQuestionTwo"></p>
+    
+        <form onsubmit="return false" id="questionThree" style="display: none;">
+            <p>Qual a capital do Tocantins ?</p>
+            <button onclick="answerThreeOne()">Teresina</button>
+            <button onclick="answerThreeTwo()">Vitória</button>
+            <button onclick="answerThreeThree()">Palmas</button>
+        </form>
+        <p id="answerQuestionThree"></p>
+    </section>
+<!-- Quiz GEOGRAFIA - FIM    -->
+
+<!-- Quiz MATEMÁTICA    -->
+    <section id="mat">
+        <form onsubmit="return false" id="questionOneMat" style="display: none;">
+            <p>Qual o resultado de 23 + 32 ?</p>
+            <button onclick="answerOneOneMat()">230</button>
+            <button onclick="answerOneTwoMat()">55</button>
+            <button onclick="answerOneThreeMat()">60</button>
+        </form>
+        <p id="answerQuestionOneMat"></p>
+        
+        <form onsubmit="return false" id="questionTwoMat" style="display: none;">
+            <p>Qual o resultado de 57 - 12 ?</p>
+            <button onclick="answerTwoOneMat()">32</button>
+            <button onclick="answerTwoTwoMat()">69</button>
+            <button onclick="answerTwoThreeMat()">45</button>
+        </form>
+        <p id="answerQuestionTwoMat"></p>
+    
+        <form onsubmit="return false" id="questionThreeMat" style="display: none;">
+            <p>Qual o resultado de 7 x 9 ?</p>
+            <button onclick="answerThreeOneMat()">63</button>
+            <button onclick="answerThreeTwoMat()">79</button>
+            <button onclick="answerThreeThreeMat()">81</button>
+        </form>
+        <p id="answerQuestionThreeMat"></p>
+    </section>
+<!-- Quiz MATEMÁTICA - FIM    -->
+
+<!-- Despedida e botão para responder novamente    -->
+    <div id="bye" style="display: none;">
+        <h2>Obrigada por participar!</h2>
+        <form onsubmit="return false">
+           <button onclick="buttonReturn()">Deseja responder novamente?</button>
+        </form> 
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
